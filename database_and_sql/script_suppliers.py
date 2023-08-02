@@ -8,7 +8,7 @@ with psycopg2.connect(
         password='8071'
 ) as conn:
     with conn.cursor() as cur:
-        with open('suppliers.json', 'r', encoding='utf-8') as file:  # Работа с файлом suppliers.json
+        with open('data/suppliers.json', 'r', encoding='utf-8') as file:  # Работа с файлом suppliers.json
             suppliers_file = json.load(file)
             for row in suppliers_file:
                 cur.execute(

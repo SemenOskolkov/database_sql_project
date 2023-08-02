@@ -14,7 +14,7 @@ with psycopg2.connect(
                                 for i, value in enumerate(row)) for row in
                            cur.fetchall()]  # Получаем массив словарей из БД. В словаре (ключ - название колонки, значение - данные колонки)
 
-    with open('suppliers.json', 'r', encoding='utf-8') as file:  # Работа с файлом suppliers.json
+    with open('data/suppliers.json', 'r', encoding='utf-8') as file:  # Работа с файлом suppliers.json
         suppliers_file = json.load(file)
         product_list = []  # Получаем массив со списками из наименований продуктов
         for item in suppliers_file:

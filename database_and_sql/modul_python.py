@@ -2,7 +2,8 @@ import json
 import psycopg2
 
 
-def get_product_by_id(config=None, id=None):  # Получение данных по продуктам
+def get_product_by_id(config=None, id=None):
+    '''Получение данных по продуктам'''
     cur = config.cursor()
     cur.execute(
         "SELECT product_id, product_name, categories.category_name, unit_price FROM products JOIN categories USING(category_id)")
@@ -22,7 +23,8 @@ product_data = json.dumps(product_conn)
 print(product_data)
 
 
-def get_category_by_id(config=None, id=None):  # Получение данных по категориям
+def get_category_by_id(config=None, id=None):
+    '''Получение данных по категориям'''
     cur = config.cursor()
     cur.execute(
         "SELECT category_id, category_name, description, products.product_name FROM categories JOIN products USING(category_id)")
