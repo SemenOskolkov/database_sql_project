@@ -1,13 +1,15 @@
 [tool.poetry]
-name = "course-project-4"
+name = "database_and_sql"
 version = "0.1.0"
 description = ""
 authors = ["Semen Oskolkov <oskolkovsemen@yandex.ru>"]
 readme = "README.md"
-packages = [{include = "course_project_4"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
+requests = "^2.31.0"
+psycopg2-binary = "^2.9.6"
+python-dotenv = "^1.0.0"
 
 
 [build-system]
