@@ -61,16 +61,21 @@ git clone git@github.com:SemenOskolkov/database_sql_project.git
 ```
 cd database_sql_project
 ```
-3. Подключитесь с PostgreSQL
+3. Создайте файл **.env** для работы с переменным окружением
+```
+touch .env
+```
+4. Заполните файл **.env** используя переменные из файла **.env.sample**
+5. Подключитесь с PostgreSQL
 Можно через pgAdmin или через терминал
-4. Создайте базу данных c названием **Northwind_Traders** от пользователя **postgres**
+6. Создайте базу данных c названием **Northwind_Traders** от пользователя **postgres**
 ```
 CREATE DATABASE Northwind_Traders;
 ```
-5. Перейдите в базу данных **Northwind_Traders**
-6. Скопируйте, вставьте и запустите скрипт для наполнения базы данными из файла **"fill_db.sql"**
-7. Скопируйте, вставьте и запустите скрипт для создания таблицы **suppliers** из файла **"create_table_suppliers.sql"**
-8. Запустите файл **"script_suppliers.py"** для заполнения таблицы **suppliers** данными из файла **"suppliers.json"**
-9. Копируйте, вставляйте и запускайте скрипты из файлов с названием **"_page.sql"** для работы с базой данных **Northwind_Traders**
+7. Перейдите в базу данных **Northwind_Traders**
+8. Скопируйте, вставьте и запустите скрипт для наполнения базы данными из файла **"fill_db.sql"**
+9. Скопируйте, вставьте и запустите скрипт для создания таблицы **suppliers** из файла **"create_table_suppliers.sql"**
+10. Запустите файл **"script_suppliers.py"** для заполнения таблицы **suppliers** данными из файла **"suppliers.json"**
+11. Копируйте, вставляйте и запускайте скрипты из файлов с названием **"_page.sql"** для работы с базой данных **Northwind_Traders**
 
 
