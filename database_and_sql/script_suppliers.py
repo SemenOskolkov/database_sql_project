@@ -1,13 +1,14 @@
 import json
-import os
 
 import psycopg2
+
+import settings
 
 with psycopg2.connect(
         host='localhost',
         database='Northwind_Traders',
-        user=os.getenv('PSQL_USER'),
-        password=os.getenv('PSQL_PASSWORD'),
+        user=settings.PSQL_USER,
+        password=settings.PSQL_PASSWORD,
 ) as conn:
     with conn.cursor() as cur:
         with open('data/suppliers.json', 'r', encoding='utf-8') as file:  # Работа с файлом suppliers.json
