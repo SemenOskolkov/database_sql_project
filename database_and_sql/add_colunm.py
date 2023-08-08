@@ -1,14 +1,15 @@
 import json
-import os
 
 import psycopg2
 from psycopg2.extras import DictCursor
 
+import settings
+
 with psycopg2.connect(
         host='localhost',
         database='Northwind_Traders',
-        user=os.getenv('PSQL_USER'),
-        password=os.getenv('PSQL_PASSWORD'),
+        user=settings.PSQL_USER,
+        password=settings.PSQL_PASSWORD,
 ) as conn:
     with conn.cursor(cursor_factory=DictCursor) as cur:
         cur.execute("SELECT product_id, product_name FROM products ")
